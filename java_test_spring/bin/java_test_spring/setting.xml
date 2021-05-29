@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Exam exam = new NewlecExam(); -->
+	<bean id="exam" class="java_test_spring.NewlecExam"/>
+	<!-- ExamConsole console = new GridExamConsole(); -->
+	<bean id="console" class="java_test_spring.GridExamConsole">
+		<!-- console.setExam(exam); -->
+		<!-- property의 name은  묵시적으로 set제거하고 E는 소문자로-->
+		<property name="exam" ref="exam"/><!-- value = 값형실일때 ref="참조형일때" --><!-- ref가 name으로 들어간다 -->
+	</bean>
+	
+
+</beans>
