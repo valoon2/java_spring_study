@@ -1,7 +1,12 @@
 package java_test_spring;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+//@Component
 public class NewlecExam implements Exam {
 	
+	@Value("20")
 	private int kor;
 	private int eng;
 	private int math;
